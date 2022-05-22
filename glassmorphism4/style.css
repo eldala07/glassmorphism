@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    scrollbar-width: thin;
+    scrollbar-color: linear-gradient(120deg, #D9FF7D 0%, #00CC76 100%) #1c1c25;
+}
+
+*::-webkit-scrollbar {
+    width: 11px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #1c1c25;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: linear-gradient(120deg, #D9FF7D 0%, #00CC76 100%);
+    border-radius: 6px;
+    border: 3px solid #1c1c25;
+}
+
+body {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    position: relative;
+    height: 100vh;
+    width: 375px;
+    /*background: linear-gradient(120deg, #DF69B3 0%, #D3BBEF 30%, #B3EEEF 75%);*/
+    background-color: #1c1c25;
+}
+
+/*.container::before {*/
+/*    content: '';*/
+/*    position: absolute;*/
+/*    top: 20%;*/
+/*    right: 5%;*/
+/*    width: 200px;*/
+/*    height: 200px;*/
+/*    background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);*/
+/*    border-radius: 50%;*/
+/*}*/
+
+.colorBubble1 {
+    position: absolute;
+    top: 45%;
+    left: 8%;
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(120deg, #FE9BE7 0%, #FCACA7 100%);
+    border-radius: 50%;
+}
+
+.colorBubble2 {
+    position: absolute;
+    top: 80%;
+    left: 65%;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(120deg, #F7FDC0 0%, #EEFC74 100%);
+    border-radius: 50%;
+}
+
+.leaf1 {
+    position: absolute;
+    top: 20%;
+    left: 62%;
+    width: 130px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.leaf3 {
+    position: absolute;
+    top: 56%;
+    left: 7%;
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
+    transform: rotate(289deg);
+}
+
+.leaves1 {
+    position: absolute;
+    top: -10%;
+    left: -15%;
+    width: 140px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.leaves2 {
+    position: absolute;
+    top: 0;
+    left: 100vw;
+    width: 50px;
+    height: auto;
+    border-radius: 50%;
+    animation-duration: 15s;
+    animation-name: fallingLeaves1;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.leaves5 {
+    position: absolute;
+    top: 90%;
+    left: 70%;
+    width: 60px;
+    height: auto;
+    border-radius: 50%;
+    transform: rotate(140deg);
+}
+
+.leaves2bis {
+    position: absolute;
+    top: 35vh;
+    left: 20vw;
+    width: 50px;
+    height: auto;
+    border-radius: 50%;
+    animation-duration: 15s;
+    animation-name: fallingLeaves2;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes fallingLeaves1 {
+    from { 	transform: rotate(0deg) translateX(75vh); }
+    to   {  transform: rotate(-360deg) translateX(75vh); }
+}
+
+@keyframes fallingLeaves2 {
+    from { 	transform: rotate(90deg) translateX(75vh); }
+    to   {  transform: rotate(450deg) translateX(75vh); }
+}
+
+.leaf1 img,
+.leaf2 img,
+.leaf3 img,
+.leaves1 img,
+.leaves2 img,
+.leaves2bis img,
+.leaves5 img
+{
+    max-width:100%;
+    max-height:100%;
+}
+
+.searchSection {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.searchBar {
+    width: 200px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 50px;
+    padding: 0 25px;
+    color: white;
+}
+
+.searchText {
+    font-size: 14px;
+}
+
+.filters {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.filterContainer {
+    display: flex;
+}
+
+.filter {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 50%;
+    cursor: pointer;
+    color: white;
+}
+
+.filter:hover {
+    opacity: 0.75;
+}
+
+.filterUp, .filterDown {
+    color: white;
+    opacity: 0.75;
+    cursor: pointer;
+}
+
+.filterUp:hover, .filterDown:hover {
+    opacity: 1;
+}
+
+.filterArrows {
+    display: flex;
+    flex-direction: column;
+    height: 45px;
+    width: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.cardList {
+    height: calc(100vh - 200px);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    overflow-y: auto;
+}
+
+.cardTitle {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    color: white;
+}
+
+.card {
+    height: 220px;
+    width: 220px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    /*box-shadow: 0 15px 35px rgba(0,0,0,0.5);*/
+    backdrop-filter: blur(20px);
+    padding: 20px 20px 0 20px;
+}
+
+.imageContainer1 {
+    width: 100%;
+    height: 150px;
+    background-image: url("./tea1.png");
+    background-size: cover;
+}
+
+.imageContainer2 {
+    width: 100%;
+    height: 150px;
+    background-image: url("./tea2.png");
+    background-size: cover;
+}
+
+.imageContainer3 {
+    width: 100%;
+    height: 150px;
+    background-image: url("./tea3.png");
+    background-size: cover;
+}
+
+.cardInfo {
+    height: calc(100% - 150px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cardName {
+    font-size: 14px;
+    color: white;
+}
+
+.cardScore {
+    font-size: 16px;
+    color: greenyellow;
+}
+
+.addButton {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 92%;
+    left: 87%;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: white;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.addButton:hover {
+    opacity: 0.75;
+}
